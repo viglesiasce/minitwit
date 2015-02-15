@@ -19,7 +19,7 @@ from werkzeug import check_password_hash, generate_password_hash
 
 
 # configuration
-DATABASE = 'minitwit.db'
+DATABASE = 'db/minitwit.db'
 PER_PAGE = 30
 DEBUG = True
 SECRET_KEY = 'password'
@@ -52,7 +52,7 @@ def close_database(exception):
 def init_db():
     """Initializes the database."""
     db = get_db()
-    with app.open_resource('schema.sql', mode='r') as f:
+    with app.open_resource('db/schema.sql', mode='r') as f:
         db.cursor().executescript(f.read())
     db.commit()
 
