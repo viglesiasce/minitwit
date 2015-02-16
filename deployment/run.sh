@@ -11,6 +11,5 @@ fi
 
 pushd /vagrant
 rm -rf __pycache__
-py.test
 flask --app=minitwit initdb
 flask --app=minitwit run -h 0.0.0.0
