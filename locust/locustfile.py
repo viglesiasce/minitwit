@@ -7,5 +7,5 @@ class MyTaskSet(TaskSet):
 
 class MyLocust(HttpLocust):
     task_set = MyTaskSet
-    min_wait = 5000
-    max_wait = 15000
+    min_wait = 1000
+    max_wait = 5000
